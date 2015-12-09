@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <script src="jquery-1.11.3.min.js"></script>
+    <script src="my_script.js"></script>
   </head>
 
   <body>
@@ -26,7 +27,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">About</a></li>
+            <li><a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/" target="_blank">Data Source</a></li>
           </ul>
         </div>
       </div>
@@ -36,13 +37,13 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Distance from Sun (km)</a></li>
-            <li><a href="#">Mass</a></li>
-            <li><a href="#">Diameter</a></li>
-            <li><a href="#">Gravity</a></li>
-            <li><a href="#">Length of Day (hours)</a></li>
-            <li><a href="#">Orbital Period (days)</a></li>
-            <li><a href="#">Number of Moons</a></li>
+            <li id="metric_0"><a href="#">Mass</a></li>
+            <li id="metric_1"><a href="#">Diameter</a></li>
+            <li id="metric_2"><a href="#">Gravity</a></li>
+            <li id="metric_3"><a href="#">Length of Day (hours)</a></li>
+            <li id="metric_4" class="active"><a href="#">Distance from Sun (km)</a></li>
+            <li id="metric_5"><a href="#">Orbital Period (days)</a></li>
+            <li id="metric_6"><a href="#">Number of Moons</a></li>
           </ul>
         </div> <!-- end of sidebar -->
 
