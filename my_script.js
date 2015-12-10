@@ -180,8 +180,8 @@ function main() {
     show_planets(metric);
   });
 
-  select_metric(DIST_FROM_SUN);
-  show_planets(DIST_FROM_SUN);
+  select_metric(MASS);
+  show_planets(MASS);
 }
 
 $(document).ready(main);
