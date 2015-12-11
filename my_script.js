@@ -1,37 +1,48 @@
+/*
+ * These functions refer to values defined in planets.js.
+ */
 
-function show_planets(metric) {
+// Show planets sorted by metric chosen by user.
+function update_planets(metric) {
+  // Update header with chosen metric.
   var header = "Rank by: " + METRIC_NAME[metric];
   $('h1#rank_header').html(header);
 
   var RANK = RANKS[metric];
 
-  for (rank_index = 0; rank_index < RANK.length; rank_index++) {
-    var planet_index = RANK[rank_index];
+  for (i = 0; i < RANK.length; i++) {
+    var planet_index = RANK[i];
 
-    var img = $('#rank-' + rank_index + ' img');
+    var img = $('#rank-' + i + ' img');
     img.attr('src', IMG[planet_index]);
 
-    var text = $('#rank-' + rank_index + ' h3');
+    var text = $('#rank-' + i + ' h3');
     text.html(NAME[planet_index] + ' : ' + VALUES[metric][planet_index]);
   }
 }
 
-
-function select_metric(metric) {
+// With bootstrap, I can highlight sidebar item by adding 'active' to the class attribute.
+// On the other hand, I have to remove 'active' from other elements' class attribute.
+function highlight_metric(metric) {
   $('[id^=metric-]').removeClass('active');
   $('#metric-' + metric).addClass('active');
 }
 
 function main() {
+  // When user click sidebar item, this anonymous function will be called.
   $('[id^=metric-]').click(function() {
+    // We find out metric index by parsing element's 'id' attributes.
+    // Notice metric index started by zero (not one).
     var metric = parseInt($(this).attr('id').slice(-1));
 
-    select_metric(metric);
-    show_planets(metric);
+    highlight_metric(metric);
+    update_planets(metric);
   });
 
-  select_metric(MASS);
-  show_planets(MASS);
+  // Set default metric to planet's mass.
+  highlight_metric(MASS);
+  update_planets(MASS);
 }
 
+// Run main function when document ready.
 $(document).ready(main);
