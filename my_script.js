@@ -44,11 +44,8 @@ function show_planets(metric) {
     var img = $('#rank-' + rank_index + ' img');
     img.attr('src', IMG[planet_index]);
 
-    var h4 = $('#rank-' + rank_index + ' h4');
-    h4.html(NAME[planet_index]);
-
-    var span = $('#rank-' + rank_index + ' span');
-    span.html(VALUES[metric][planet_index]);
+    var text = $('#rank-' + rank_index + ' h3');
+    text.html(NAME[planet_index] + ' : ' + VALUES[metric][planet_index]);
   }
 }
 
