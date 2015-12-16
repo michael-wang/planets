@@ -58,7 +58,7 @@ METRIC_NAME[MASS]          = "Mass (10^24 kg)";
 METRIC_NAME[DIAMETER]      = "Diameter (km)";
 METRIC_NAME[GRAVITY]       = "Gravity (m/s^2)";
 METRIC_NAME[LEN_OF_DAY]    = "Length of Day (hours)";
-METRIC_NAME[DIST_FROM_SUN] = "Distance from Sun (km)";
+METRIC_NAME[DIST_FROM_SUN] = "Distance from Sun (10^6 km)";
 METRIC_NAME[ORB_PERIOD]    = "Orbital Period (days)";
 METRIC_NAME[NUM_OF_MOON]   = "Number of Moons";
 
